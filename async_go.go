@@ -7,21 +7,24 @@ import (
 
 
 func main() {
-    url := "http://thecatapi.com/api/images/get?type=jpg"
-    done := make(chan bool)
+    url := "http://example.com"
+    resc, errc := make(chan bool), make(chan error)
 
-    for i := 0; i < 5; i++ {
+    for i := 0; i < 1000; i++ {
         go func(url string) {
-            response, err := http.Get(url)
+            _, err := http.Get(url)
             if err != nil {
-                fmt.Println("Error occurred")
-            } else {
-                fmt.Println(response)
+                errc <- err
+                return
             }
-            done <- true
+            resc <- true
         }(url)
     }
-    for i := 0; i < 5; i++ {
-        <-done
+    for i := 0; i < 1000; i++ {
+        select {
+        case <-resc:
+        case err := <-errc:
+            fmt.Println(err)
+        }
     }
 }
