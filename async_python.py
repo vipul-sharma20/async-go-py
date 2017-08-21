@@ -12,10 +12,9 @@ async def main():
         )
         for i in range(1000)
     ]
-    for response in await asyncio.gather(*futures):
-        pass
+    return await asyncio.gather(*futures)
 
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    _ = loop.run_until_complete(main())
