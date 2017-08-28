@@ -5,7 +5,7 @@ import asyncio
 async def main():
     async with aiohttp.ClientSession() as session:
         for i in range(1000):
-            await session.get('http://example.com')
+            await session.head('http://example.com')
 
 
 if __name__ == '__main__':

@@ -9,7 +9,7 @@ func main() {
     url := "http://example.com"
 
     for i := 1; i < 1000; i++ {
-        _, err := http.Get(url)
+        _, err := http.Head(url)
         if err != nil {
             fmt.Println(err)
         }

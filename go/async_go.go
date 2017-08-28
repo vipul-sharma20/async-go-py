@@ -12,7 +12,7 @@ func main() {
 
     for i := 0; i < 1000; i++ {
         go func(url string) {
-            _, err := http.Get(url)
+            _, err := http.Head(url)
             if err != nil {
                 errc <- err
                 return

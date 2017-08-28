@@ -7,7 +7,7 @@ async def main():
     futures = [
         loop.run_in_executor(
             None,
-            requests.get,
+            requests.head,
             'http://example.com'
         )
         for i in range(1000)

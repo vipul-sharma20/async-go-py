@@ -7,7 +7,7 @@ async def main(http):
         loop.run_in_executor(
             None,
             http.request,
-            'GET', 'http://example.com'
+            'HEAD', 'http://example.com'
         )
         for i in range(1000)
     ]
