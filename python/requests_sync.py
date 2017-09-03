@@ -1,3 +1,7 @@
+"""
+Synchronous requests using `requests`
+"""
+
 import requests
 
 

@@ -1,3 +1,7 @@
+"""
+Asynchronous requests using `urllib3` with `run_in_executor` of `asyncio`
+"""
+
 import asyncio
 import urllib3
 

@@ -1,3 +1,7 @@
+"""
+Synchronous requests using `urllib3`
+"""
+
 import urllib3
 
 

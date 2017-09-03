@@ -1,6 +1,11 @@
+"""
+Asynchronous requests using `aiohttp`
+"""
+
 import asyncio
 
 import aiohttp
+
 
 async def main():
     async with aiohttp.ClientSession() as session:
