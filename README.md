@@ -35,6 +35,13 @@ Analysis
 
 [![oh no](https://i.imgur.com/vTTn4JZ.png)](https://i.imgur.com/vTTn4JZ.png)
 
+Thanks to
+---------
+People who helped me understand important concepts
+
+* Brett Cannon: [How the heck async/await works](https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/)
+* Abu Ashraf Masnun: [Concurrency in Python](http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/)
+* Nathan Leclaire: [Go channels](https://nathanleclaire.com/blog/2014/02/21/how-to-wait-for-all-goroutines-to-finish-executing-before-continuing-part-two-fixing-my-ooops/)
 
 LICENSE
 -------
